@@ -80,12 +80,6 @@ require('lazy').setup({
   'chentoast/marks.nvim',
 
   'preservim/nerdtree',
-  'ryanoasis/vim-devicons',
-  'phillrunninger/nerdtree-visual-selection',
-  'phillrunninger/nerdtree-buffer-ops',
-  'scrooloose/nerdtree-project-plugin',
-  'tiagofumo/vim-nerdtree-syntax-highlight',
-  'xuyuanp/nerdtree-git-plugin'
 
 
   -- NOTE: This is where your plugins related to LSP can be installed.
