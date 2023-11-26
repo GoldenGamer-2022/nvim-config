@@ -76,6 +76,18 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Improved marks
+  'chentoast/marks.nvim',
+
+  'preservim/nerdtree',
+  'ryanoasis/vim-devicons',
+  'phillrunninger/nerdtree-visual-selection',
+  'phillrunninger/nerdtree-buffer-ops',
+  'scrooloose/nerdtree-project-plugin',
+  'tiagofumo/vim-nerdtree-syntax-highlight',
+  'xuyuanp/nerdtree-git-plugin'
+
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -273,6 +285,8 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.cmd [[NERDTree]]
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -371,6 +385,8 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+
+require('orin.keymap')
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
